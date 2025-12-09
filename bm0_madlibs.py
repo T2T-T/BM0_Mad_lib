@@ -13,12 +13,12 @@ def story_one():
 	verb = input("Enter a verb ending in -ing: ")
 	animal = input("Enter an animal: ")
 
-	story = (
-	f"Today I went to the zoo and saw a {adjective} {animal} "
-	f"{verb} next to a huge {noun}! It was the craziest thing ever!"
-	)
-	print("\nYour Story:")
-	print(story)
+story = (
+f"Today I went to the zoo and saw a {adjective} {animal} "
+f"{verb} next to a huge {noun}! It was the craziest thing ever!"
+)
+print("\nYour Story:")
+print(story)
 
 
 def story_two():
@@ -28,13 +28,13 @@ def story_two():
 	adjective = input("Enter an adjective: ")
 	verb = input("Enter a past-tense verb: ")
 
-	story = (
-	f"In class today, {teacher} brought in {food} for everyone. "
-	f"It smelled so {adjective} that the whole class {verb}!"
-	)
+story = (
+f"In class today, {teacher} brought in {food} for everyone. "
+f"It smelled so {adjective} that the whole class {verb}!"
+)
 
-	print("\nYour Story:")
-	print(story)
+print("\nYour Story:")
+print(story)
 
 
 def story_three():
@@ -49,15 +49,13 @@ def story_three():
 	f"before riding away on a {creature}!"
 	)
 
-	stories = [story_one, story_two, story_three]
-	chosen_story = random.choice(stories)
-	chosen_story()
-	print("\nYour Story:")
-	print(story)
+stories = [story_one, story_two, story_three]
+chosen_story = random.choice(stories)
+chosen_story()
+print("\nYour Story:")
+print(story)
 
 
 if __name__ == "__main__":
 	play_mad_libs()
-	story_one()
-	story_two()
-	story_three()
+	

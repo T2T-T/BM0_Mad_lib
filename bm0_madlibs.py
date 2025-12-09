@@ -1,11 +1,63 @@
-import random 
-random (1,3)
+import random
+
+def play_mad_libs():
+	print("\nWelcome to Mad Libs! Let's make a funny story.")
 
 
-User = int(input("what story would you want to read out of the 3, either 3 little pigs, the big bean stock, and run like lightning. "))
-if User == 1:
-	print("good choice, here is the stroy, a big bad wolf walks to these 3 houses and says hey im hungry lets go get sum pigs, then he walks to the house and then blows down 2 out of the 3 hosues and the brick house live and the pigs live  ")
-elif User == 2: 
-	print(" another great choice, he is the story for this, A boy name billy plants a bean stock and then its gets big then it has a house and giants on top")
-elif User == 3: print("amazing choice, here is the story, a turtle races a bunny and when the race starts the turtle changes positions with another turtle that looks identical to him at the finish line and beat the bunny and the turtle wins.")
 
+
+def story_one():
+	print("\n--- Mad Lib #1: A Day at the Zoo ---")
+	noun = input("Enter a noun: ")
+	adjective = input("Enter an adjective: ")
+	verb = input("Enter a verb ending in -ing: ")
+	animal = input("Enter an animal: ")
+
+	story = (
+	f"Today I went to the zoo and saw a {adjective} {animal} "
+	f"{verb} next to a huge {noun}! It was the craziest thing ever!"
+	)
+	print("\nYour Story:")
+	print(story)
+
+
+def story_two():
+	print("\n--- Mad Lib #2: The Crazy School Day ---")
+	teacher = input("Enter your teacher's name: ")
+	food = input("Enter a type of food: ")
+	adjective = input("Enter an adjective: ")
+	verb = input("Enter a past-tense verb: ")
+
+	story = (
+	f"In class today, {teacher} brought in {food} for everyone. "
+	f"It smelled so {adjective} that the whole class {verb}!"
+	)
+
+	print("\nYour Story:")
+	print(story)
+
+
+def story_three():
+	print("\n--- Mad Lib #3: Space Adventure ---")
+	planet = input("Enter the name of a planet: ")
+	adjective = input("Enter an adjective: ")
+	sound = input("Enter a funny sound: ")
+	creature = input("Enter a made-up creature: ")
+
+	story = (
+	f"While visiting {planet}, I met a {adjective} alien that said '{sound}' "
+	f"before riding away on a {creature}!"
+	)
+
+	stories = [story_one, story_two, story_three]
+	chosen_story = random.choice(stories)
+	chosen_story()
+	print("\nYour Story:")
+	print(story)
+
+
+if __name__ == "__main__":
+	play_mad_libs()
+	story_one()
+	story_two()
+	story_three()
